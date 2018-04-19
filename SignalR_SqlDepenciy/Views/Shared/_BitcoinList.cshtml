@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<SignalR_SqlDepenciy.Models.Bitcoin>
+
+<table class="table  table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Fiyat</th>
+            <th>Miktar</th>
+            <th>Toplam</th>
+        </tr>
+    </thead>
+<tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td></td>
+                <td><i class="fa fa-turkish-lira ">&nbsp; @item.Price  </i> </td>
+
+                <td><i class="fa fa-btc ">&nbsp;@item.quantity </i></td>
+                <td><i class="fa fa-turkish-lira ">&nbsp; @item.Total  </i> </td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>

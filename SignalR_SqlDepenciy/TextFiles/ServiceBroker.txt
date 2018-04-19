@@ -1,0 +1,2 @@
+﻿Service Broker kullanarak, alt yapıdaki mesajlaşma ortamını ve işlemlerin bütünlüğünün takibini neredeyse unutabilirsiniz. Eskiden kendiniz uğraşmanız gereken pek çok detay, artık Service Broker'ın ellerine emanet. Mesaj kuyruklarının bellek ya da diske yazdığı bilgiler, artık veritabanı tablolarında.
+Service Broker'la çok daha güvenli ve rahat asenkron veritabanı uygulamaları geliştirebilirsiniz.
