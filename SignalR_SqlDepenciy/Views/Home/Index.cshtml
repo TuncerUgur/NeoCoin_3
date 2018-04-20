@@ -1,4 +1,4 @@
-﻿
+
 @{ 
     Layout = null;
 }
@@ -7,11 +7,10 @@
 <head>
     <title>NeoCoin</title>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
+
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <style>
         .solBaslik {
@@ -28,7 +27,6 @@
     <script src="~/Scripts/jquery.signalR-2.2.3.js"></script>
     <script src="~/signalr/hubs" type="text/javascript"></script>
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-    <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     <script type="text/javascript">
 
@@ -44,16 +42,13 @@
             getData();
         });
 
-        //Burada JavaScript komutlarıyla “personelHub” isminde bir Hub oluşturuyoruz ve “PersonelHub.cs” sınıfımızda dinamik olarak üretilen “tetikle” değerine bu Hub’ı bağlıyoruz. Haliyle bu ilişkide bir fonksiyon devrededir.
-
-        //Yani ne zaman “PersonelHub.cs” sınıfındaki Show metodu tetiklenir, Client’lar da bu fonksiyon tetiklenecektir.
 
         function getData() {
 
-            var tbl = $('#PersonelListesi');
+            var tbl = $('#ExchangeList');
 
             $.ajax({
-                url: '@Url.Action("PersonelleriGetir", "Home")',
+                url: '@Url.Action("GetExchanges", "Home")',
                 type: 'GET',
                 datatype: 'json',
                 success: function (data,) {
@@ -105,7 +100,7 @@
 
                     <span class="label label-default">LTC: 521.60</span>*@
             </div>
-            <span id="PersonelListesi">
+            <span id="ExchangeList">
 
             </span>
             <!-- /.navbar-header -->
