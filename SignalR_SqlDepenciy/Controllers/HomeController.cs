@@ -22,11 +22,11 @@ namespace SignalR_SqlDepenciy.Controllers
             return View();
         }
 
-        public string PersonelleriGetir()
+   public string GetExchanges()
         {
             VeriTabaniIslemleri Veri = new VeriTabaniIslemleri();
-            var Personeller = Veri.GetExchanges();
-            return Helper.RazorViewRender(Personeller, "~/Views/Shared/_ExchangeList.cshtml");
+            var exc = Veri.GetExchanges();
+            return Helper.RazorViewRender(exc, "~/Views/Shared/_ExchangeList.cshtml");
         }
 
         public string BitcoinGetir()
