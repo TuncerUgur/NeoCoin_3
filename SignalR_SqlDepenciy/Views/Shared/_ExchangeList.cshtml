@@ -1,45 +1,8 @@
-﻿
+
 @model IEnumerable<SignalR_SqlDepenciy.Models.Exchange>
 
-@*<table class="table">*@
-    @*<tr>
-        <th>
-            Adı
-        </th>
-        <th>
-            Soyadı
-        </th>
-        <th>
-            Ünvan
-        </th>
-    </tr>*@
+@foreach (var item in Model)
+{
 
-    @foreach (var item in Model)
-    {
-        @*<tr>
-            <td>*@
-
-
-  
-     <button class="btn btn-success"> @(item.Name + " : " + item.Stock_Exchange) &nbsp;</button> 
- 
-
-      
-
-
-
-
-        @*</td>
-            <td>*@
-
-        @*<span class="label label-default ">@item.Stock_Exchange</span>*@
-
-       
-
-
-
-        @*</td>
-
-            </tr>*@
-        }
-@*</table>*@
+    <button class="btn btn-success"> @(item.Name + " : " + item.Stock_Exchange) &nbsp;</button>
+}
